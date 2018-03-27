@@ -55,11 +55,11 @@ void why_wake(){
   int wake_cause = esp_sleep_get_wakeup_cause();
   printf("Wake Cause (%d): ", wake_cause);
   switch (wake_cause) {
-    case 1  : printf("Wakeup caused by external signal using RTC_IO");
-    case 2  : printf("Wakeup caused by external signal using RTC_CNTL");
-    case 3  : printf("Wakeup caused by timer");
-    case 4  : printf("Wakeup caused by touchpad");
-    case 5  : printf("Wakeup caused by ULP program");
+    case 1  : printf("Wakeup caused by external signal using RTC_IO");break;
+    case 2  : printf("Wakeup caused by external signal using RTC_CNTL");break;
+    case 3  : printf("Wakeup caused by timer");break;
+    case 4  : printf("Wakeup caused by touchpad");break;
+    case 5  : printf("Wakeup caused by ULP program");break;
     default : printf("Undefined.  In case of deep sleep, reset was not caused by exit from deep sleep.");
   } 
   printf("\n");
